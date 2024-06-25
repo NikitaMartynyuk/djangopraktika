@@ -1,7 +1,7 @@
 import logging
 
 from django.shortcuts import render
-from .forms import UserForm
+from .forms import UserForm, ManyFieldForm
 
 logger = logging.getLogger(__name__)
 
@@ -13,8 +13,7 @@ def user_form(request):
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             age = form.cleaned_data['age']
-            logger.info(f' Получили {name=}, {email=}, {age=}.')
-
+            logger.info(f'Получили {name=}, {email=}, {age=}.')
     else:
-        form = UserForm()
+        form = ManyFieldForm()
     return render(request, 'myapp4/user_form.html', {'form': form})
