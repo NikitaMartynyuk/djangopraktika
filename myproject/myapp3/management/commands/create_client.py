@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from myapp3.models import Client
+from myproject.myapp3.models import Client
 
 
 class Command(BaseCommand):
@@ -7,10 +7,10 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         for i in range(1, 5):
-            client = Client(
+            client = Client (
                 name=f"Client {i}",
                 email=f"example{i}@mail.com",
-                phone=f"+7({i}{i}{i})-222-33-33",
+                phone=f"+7({i}{i}{i})-111-22-33",
                 address="Spb",
             )
             client.save()

@@ -2,7 +2,7 @@ import logging
 from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
 from datetime import timedelta
-from .models import Order, Client, Product
+from .models import Order, Client
 
 logger = logging.getLogger(__name__)
 
