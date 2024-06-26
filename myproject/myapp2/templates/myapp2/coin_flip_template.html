@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Coin Flips</title>
+</head>
+<body>
+    <h1>Coin Flips History</h1>
+    <ul>
+        {% for flip in flips %}
+            <li>{{ flip.get_result_display }} flipped at {{ flip.flip_time }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
