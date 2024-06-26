@@ -16,4 +16,4 @@ class Command(BaseCommand):
             order.calculate_total()
             order.save()
 
-            self.stdout.write(self.style.SUCCESS("Fake orders is added"))
+        self.stdout.write(self.style.SUCCESS("Fake orders is added"))
